@@ -33,6 +33,49 @@ The framework operates as a closed-loop system where each component validates or
 
 ---
 
+---
+
+## Architecture
+
+```mermaid
+graph TB
+    %% Phase 1: Offensive Generation (Maelstrom Breach)
+    subgraph Red_Team [🌪️ Maelstrom Breach: SIMULATE]
+        ORCH[Simulation Orchestrator] --> BOTS[Distributed Bot Nodes]
+        BOTS -->|Multi-Vector Attacks| INGRESS[Ingress Control Layer]
+    end
+
+    %% Phase 2: Observability (Sentinel Trace)
+    subgraph Kernel_Layer [Linux Kernel]
+        INGRESS --> HOOKS{eBPF Hooks}
+    end
+
+    subgraph Blue_Team_Trace [📡 Sentinel Trace: OBSERVE]
+        HOOKS -->|Telemetry| TRACE[Sentinel Trace Engine]
+        TRACE -->|Context Enrichment| REASON{Reasoning Engine}
+    end
+
+    %% Phase 3: Enforcement (Sovereign Shield)
+    subgraph Blue_Team_Shield [🛡️ Sovereign Shield: ENFORCE]
+        REASON -->|Suspicious Activity| POLICY{eBPF Policy Match}
+        POLICY -->|DROP / REJECT| DROP[Kernel-Level Enforcement]
+        POLICY -->|ALERT| ACTION[Automated Response]
+    end
+
+    %% Automation & Feedback Loop
+    ACTION -->|Ansible Playbook| ISO[Node Isolation]
+    ACTION -->|Hubble / Grafana| METRICS[Performance & Fidelity Metrics]
+    ISO -.->|Purple Team Feedback| ORCH
+
+    %% Styling
+    style Red_Team fill:#1a0000,stroke:#ff4d4d,stroke-width:2px,color:#fff
+    style Blue_Team_Trace fill:#001a33,stroke:#3399ff,stroke-width:2px,color:#fff
+    style Blue_Team_Shield fill:#001a00,stroke:#00cc44,stroke-width:2px,color:#fff
+    style HOOKS fill:#333,stroke:#fff,color:#fff
+
+```
+---
+
 ## 🔁 The Purple Team Workflow
 
 The integration of the triplet follows a rigorous validation cycle:
