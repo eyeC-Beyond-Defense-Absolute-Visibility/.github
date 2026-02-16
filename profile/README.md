@@ -103,6 +103,8 @@ graph TB
 
 ```
 
+---
+
 ## ⚠️ Continuous Evolution Notice
 
 The **eyeC** triplet—Sovereign-Shield, Sentinel-Trace, and Maelstrom-Breach—is currently under active and continuous development.
