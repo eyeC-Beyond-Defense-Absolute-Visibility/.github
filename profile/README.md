@@ -1,4 +1,4 @@
-# 👁️ eyeC(ybersecurity) — Beyond Defense, Absolute Visibility — [... I see!]
+# 👁️ eyeC(ybersecurity) — [... I see!] — Beyond Defense, Absolute Visibility
 
 High-fidelity security engineering focused on kernel-space enforcement and adversarial resilience.
 
