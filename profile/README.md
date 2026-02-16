@@ -1,39 +1,35 @@
 # 👁️ eyeC(ybersecurity) — Beyond Defense, Absolute Visibility
 
-> **Invisibility is not an option. We make the kernel transparent and the adversary predictable.**
+> "In the kernel we trust, in the noise we find truth."
+
+Welcome to the **eyeC** organization. We specialize in high-fidelity security engineering, focusing on kernel-level enforcement, eBPF-based observability, and rigorous adversary simulation. Our mission is to move past traditional "black box" security toward a model of **Absolute Visibility**.
 
 ---
 
-## 🛡️ Our Vision: The Purple Team Paradigm
-eyeC is a security engineering ecosystem focused on the power of **eBPF**. We believe that modern defense must not only block, but it must **observe, reason, and react** in real time at the heart of the Linux kernel.
+## 🛡️ The Ecosystem: Shield & Storm
 
-### 🌪️ The Storm (Offensive) | [MAELSTROM-BREACH]
-Our distributed adversary simulation framework.
+We believe defense cannot be validated without a sophisticated offense. Our work is split into two specialized pillars that feed into each other through a continuous **Purple Team loop**.
 
-- **Objective:** Stress large-scale security architectures.
+### 🌊 MAELSTROM-BREACH
+**Adversary Simulation Framework**
 
-- **Vectors:** SYN Pressure, L7 Method Abuse, DNS Tunneling.
+- **Purpose:** Offensive stress-testing of modern security stacks.
+- **Capabilities:** Distributed SYN pressure, L7 method hijacking, and DNS exfiltration.
+- **Focus:** Validating detection fidelity and enforcement resilience under sustained chaos.
 
-- **Role:** Validate detection fidelity under massive background noise.
+### 🛡️ SOVEREIGN-SHIELD
+**eBPF-Powered Defensive Architecture**
 
-### 🛡️ The Shield (Defensive) | [SOVEREIGN-SHIELD]
-Our self-healing and kernel defense architecture.
-
-- **Technology:** Based on Cilium and Sentinel Trace.
-
-- **Enforcement:** eBPF hooks for near-zero latency filtering.
-
-- **Response:** Automated threat isolation via Ansible.
+- **Purpose:** Real-time kernel enforcement and zero-trust micro-segmentation.
+- **Capabilities:** Syscall tracing, L7 protocol inspection, and automated Ansible-driven quarantine.
+- **Focus:** High-performance security that scales without degrading system stability.
 
 ---
 
-## 🧱 Our Technology Stack
-- **Kernel & Hooks:** eBPF (XDP, TC, Kprobes)
-- **Networking:** Cilium, Hubble, Envoy
-- **Orchestration:** Kubernetes (K3s), Ansible
-- **Observability:** Prometheus, Grafana, Sentinel Trace
-- **Attack:** Kali Linux, Python (Scapy, Requests), hping3
+## 🧠 Core Philosophy: The Purple Loop
 
----
-
-> *"Absolute Visibility isn't just a name, it's a kernel-level requirement."*
+1. **Simulate:** Execute distributed attacks via Maelstrom.
+2. **Observe:** Capture telemetry using Sentinel Trace (eBPF).
+3. **Enforce:** Apply granular kernel hooks via Cilium.
+4. **Automate:** Trigger Ansible playbooks for sub-3s incident response.
+5. **Refine:** Use performance metrics to harden the security policy.
