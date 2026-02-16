@@ -63,7 +63,7 @@ The integration of the triplet follows a rigorous validation cycle:
 
   ---
 
-## Architecture: Global View
+## 🧱 Architecture: Global View
 
 ```mermaid
 graph TB
