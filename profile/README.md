@@ -36,7 +36,4 @@ Our self-healing and kernel defense architecture.
 
 ---
 
-## 📊 Purple Team Engagement
-We measure our success by **Visibility Delta**: the ability to identify a "Low-and-Slow" exfiltration attack while the system is under a DoS of 50,000 packets per second.
-
 > *"Absolute Visibility isn't just a name, it's a kernel-level requirement."*
