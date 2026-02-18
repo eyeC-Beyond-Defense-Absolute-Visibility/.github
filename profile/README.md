@@ -1,3 +1,10 @@
+![VMware](https://img.shields.io/badge/VMware-Virtualization-607078?logo=vmware\&logoColor=white)
+![K3s](https://img.shields.io/badge/Kubernetes-K3s-326ce5?logo=kubernetes\&logoColor=white)
+![Cilium](https://img.shields.io/badge/Cilium-eBPF-ffcc00?logo=cilium\&logoColor=black)
+![eBPF](https://img.shields.io/badge/Linux-eBPF-000000?logo=linux\&logoColor=white)
+![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
+
+
 # 👁️ eyeC(ybersecurity) — [... I see!] — Beyond Defense, Absolute Visibility
 
 High-fidelity security engineering focused on kernel-space enforcement and adversarial resilience.
