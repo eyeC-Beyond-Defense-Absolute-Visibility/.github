@@ -5,7 +5,7 @@
 ![Security](https://img.shields.io/badge/Security-Zero--Trust-red)
 
 
-# 👁️ eyeC(ybersecurity) — [... I see!] — Beyond Defense, Absolute Visibility
+# 👁️ eyeC(ybersecurity) ~ (... I see!) — Beyond Defense, Absolute Visibility
 
 High-fidelity security engineering focused on kernel-space enforcement and adversarial resilience.
 
