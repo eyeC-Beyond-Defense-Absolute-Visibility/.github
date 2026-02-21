@@ -7,68 +7,57 @@
 
 # 👁️ eyeC(ybersecurity) ~ (... I see!) — Beyond Defense, Absolute Visibility
 
-High-fidelity security engineering focused on kernel-space enforcement and adversarial resilience.
 
-The eyeC ecosystem is built upon a specialized triplet of projects designed to achieve absolute visibility and automated enforcement within Linux environments. This architecture integrates offensive simulation, real-time kernel tracing, and zero-trust orchestration.
+> *"Turning the invisible into actionable defense. A Closed-Loop Security Trilogy."*
 
----
-
-## 🏗️ The Core Triplet
-
-The framework operates as a closed-loop system where each component validates or empowers the others.
-
-### 🌪️ MAELSTROM-BREACH
-**The Offensive Catalyst**
-
-- **Role:** Orchestrates distributed adversary simulations to stress-test defensive boundaries.
-- **Capabilities:** L3/L4 SYN flooding, L7 method abuse, and DNS-based data exfiltration.
-- **Validation:** Measures the breaking point of security hooks and the fidelity of detection signals under noise.
-
-### 📡 SENTINEL-TRACE
-**The Observability Engine**
-
-- **Role:** Provides deep kernel-level telemetry using eBPF probes.
-- **Capabilities:** Real-time syscall monitoring (sys_connect, sys_write), network flow analysis, and process lineage tracking.
-- **Visibility:** Transforms raw kernel events into actionable security intelligence.
-
-### 🛡️ SOVEREIGN-SHIELD
-**The Enforcement Pillar**
-
-- **Role:** Implements zero-trust policies and automated incident response.
-- **Capabilities:** Kernel-level traffic dropping via Cilium, micro-segmentation, and sub-3s pod isolation via Ansible.
-- **Goal:** Maintains system integrity and ensures policy compliance during active exploitation attempts.
-- 
----
-
-## 🔁 The Purple Team Workflow
-
-The integration of the triplet follows a rigorous validation cycle:
-
-1. **Generation:** Maelstrom-Breach injects multi-vector attack traffic into the environment.
-2. **Detection:** Sentinel-Trace captures the resulting syscalls and anomalous network patterns.
-3. **Enforcement:** Sovereign-Shield applies eBPF-based filters to drop malicious packets at the kernel level.
-4. **Response:** The automated pipeline triggers quarantine protocols to isolate compromised assets.
+L'écosystème eyeC est une suite de projets intégrés conçue pour démontrer la maîtrise du cycle de vie d'un incident de cybersécurité, de l'émulation de l'adversaire à la réponse automatisée au niveau du noyau (Kernel).
 
 ---
 
-## 🛠️ Technical Specifications
+## 🏗️ L'Architecture de la Trilogie
 
-| Domain | Technology Stack |
-|--------|-----------------|
-| Kernel Hooking | eBPF (XDP, TC), Cilium |
-| Monitoring | Hubble, Prometheus, Grafana |
-| Infrastructure | K3s (Kubernetes), Ubuntu Server, Debian |
-| Automation | Ansible, Python, Bash |
+Mon approche repose sur l'interconnexion de trois piliers fondamentaux :
+
+### 1. 🛡️ Sovereign-Shield (The Enforcement Plane)
+
+* **Rôle :** IPS (Intrusion Prevention System) & Orchestrateur de Quarantaine.
+* **Technologies :** C++, Kubernetes (K3s), eBPF (Cilium), Ansible.
+* **Innovation :** Capacité d'isoler des nœuds compromis en temps réel via des politiques réseau "Hardened" sans interruption de service.
+
+### 2. 🛰️ Sentinel-Trace (The Intelligence Brain)
+
+* **Rôle :** IDS (Intrusion Detection System) & Moteur de Corrélation.
+* **Technologies :** C++, eBPF (Tetragon), MITRE ATT&CK Mapping.
+* **Innovation :** Analyse comportementale au niveau du noyau Linux pour détecter des chaînes d'attaques complexes (ex: Reverse Shells) là où les outils traditionnels échouent.
+
+### 3. 🌪️ Maelstrom-Breach (The Adversary Engine)
+
+* **Rôle :** BAS (Breach & Attack Simulation) & Red Teaming.
+* **Technologies :** C++, Python, Bash.
+* **Innovation :** Automatisation de campagnes d'attaques multi-étapes (DDoS, SQLi, Ransomware) pour valider l'efficacité des boucliers défensifs.
 
 ---
 
-## 📬 Deployment Status
+## 🔄 Le Cycle de Validation "eyeC"
 
-- **Environment:** Isolated Laboratory Simulation
-- **Target Architecture:** Linux Kernel 5.15+ (LTS)
-- **Objective:** Achieving a good detection rate for threats
+Voici comment les trois projets collaborent lors d'une simulation :
 
-  ---
+1. **ATTACK :** `Maelstrom-Breach` lance une campagne de Ransomware (`ransom_sim.cpp`).
+2. **DETECTION :** `Sentinel-Trace` identifie un pic d'appels système suspects via ses hooks eBPF et corrèle l'activité.
+3. **RESPONSE :** `Sentinel-Trace` envoie un signal critique à `Sovereign-Shield`.
+4. **PROTECTION :** `Sovereign-Shield` exécute instantanément une isolation réseau du nœud cible.
+
+---
+
+## 🛠️ Stack Technique Globale
+
+* **Languages :** C++17 (Performance), Python (Payloads), Bash (Automation).
+* **Infra :** Kubernetes, Docker, Multi-OS (Debian, AlmaLinux, Windows).
+* **Security :** eBPF/Tetragon, Cilium, MITRE ATT&CK, NIST Framework.
+* **Ops :** Ansible (IaC), CMake, CI/CD.
+
+---
+
 
 ## 🧱 Architecture: Global View
 
@@ -117,3 +106,10 @@ graph TB
 The **eyeC** triplet—Sovereign-Shield, Sentinel-Trace, and Maelstrom-Breach—is currently under active and continuous development.
 
 **Note:** This project is a living research framework. It is recommended to check the latest commits in each repository for the most up-to-date implementation details.
+
+
+## 👤 Author
+
+**O'djuma Badolo**  
+Web Developer | Cybersecurity graduate | DevSecOps Enthusiast  
+*"Building secure systems by thinking like the storm."*
